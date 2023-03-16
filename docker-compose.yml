@@ -1,0 +1,138 @@
+version: '3.9'
+
+networks:
+  laravel:
+
+services:
+
+  site:
+    build:
+      context: ./dockerfiles
+      dockerfile: nginx.dockerfile
+      args:
+        - "UID=${UID:-1000}"
+        - "GID=${GID:-1000}"
+    container_name: nginx${CONTAINER_SHORT}
+    ports:
+      - "${PORT_NGINX}:80"
+    volumes:
+      - ./src:/var/www/html:delegated
+    depends_on:
+      - php
+      - redis
+      - mysql
+      - mailhog
+      - phpmyadmin
+    networks:
+      - laravel
+
+  mysql:
+    image: mariadb:10.6
+    container_name: mysql${CONTAINER_SHORT}
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "${PORT_MYSQL}:3306"
+    environment:
+      MYSQL_DATABASE: laravel_dd
+      MYSQL_USER: homestead
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - laravel
+
+  php:
+    build:
+      context: ./dockerfiles
+      dockerfile: php.dockerfile
+      args:
+        - "UID=${UID:-1000}"
+        - "GID=${GID:-1000}"
+    container_name: php${CONTAINER_SHORT}
+    volumes:
+      - ./src:/var/www/html:delegated
+      - ./local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - laravel
+
+  redis:
+    image: redis:alpine
+    container_name: redis${CONTAINER_SHORT}
+    restart: unless-stopped
+    ports:
+      - "${PORT_REDIS}:6379"
+    networks:
+      - laravel
+
+  composer:
+    build:
+      context: ./dockerfiles
+      dockerfile: composer.dockerfile
+      args:
+        - "UID=${UID:-1000}"
+        - "GID=${GID:-1000}"
+    container_name: composer${CONTAINER_SHORT}
+    volumes:
+      - ./src:/var/www/html
+    working_dir: /var/www/html
+    depends_on:
+      - php
+    user: laravel
+    entrypoint: ['composer', '--ignore-platform-reqs']
+    networks:
+      - laravel
+
+  npm:
+    image: node:alpine
+    container_name: npm${CONTAINER_SHORT}
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    working_dir: /var/www/html
+    profiles: ["npm"]
+    entrypoint: ['npm']
+    networks:
+      - laravel
+
+  artisan:
+    build:
+      context: ./dockerfiles
+      dockerfile: php.dockerfile
+      args:
+        - "UID=${UID:-1000}"
+        - "GID=${GID:-1000}"
+    container_name: artisan${CONTAINER_SHORT}
+    volumes:
+      - ./src:/var/www/html:delegated
+    depends_on:
+      - mysql
+    working_dir: /var/www/html
+    entrypoint: ['php', '/var/www/html/artisan']
+    user: "${UID}:${GID}"
+    networks:
+      - laravel
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: mailhog${CONTAINER_SHORT}
+    ports:
+      - "${PORT_MAILHOG}:1025"
+      - "${PORT_MAILHOG_EXTERN}:8025"
+    networks:
+      - laravel
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '${PORT_PHPMYADMIN}:80'
+    restart: always
+    environment:
+      PMA_HOST: mysql
+    depends_on:
+      - mysql
+    networks:
+      - laravel

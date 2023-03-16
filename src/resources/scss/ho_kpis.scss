@@ -1,0 +1,91 @@
+
+.ho_kpis .panel_items{display:flex;margin:0 -5px;padding:0 0 25px;}
+.ho_kpis .panel_items .panel_item{width:100%;padding:0 5px;}
+.ho_kpis .panel_items .panel_item .inside{height:100px;background:#F0F3F5;}
+.ho_kpis .panel_items .panel_item .inside .date_time_container .icon{position:absolute;right:7px;top:8px;cursor:pointer;padding:0 3px;background:#fff;}
+
+
+
+.ho_kpis .chart_boxes{display:flex;flex-wrap:wrap;margin:0 -15px;}
+.ho_kpis .chart_boxes .ho_kpi{width:50%;padding:0 15px 30px;}
+.ho_kpis .chart_boxes .ho_kpi .content{background:#22303F;color:#fff;}
+
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data{color:#fff;}
+
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .head{background:#2e435c;color:#fff;padding:10px 20px 8px;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .head .name{font-size:22px;font-weight:700;margin-right:4px;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .head .desc .livewire-tooltip-wrapper .fa{font-size:22px;cursor:help;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .head .desc .livewire-tooltip{width:300px;font-size:12px;background:rgba(34,48,63,1);border:1px solid #575757;text-align:left;}
+
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside{display:flex;align-items:center;padding:10px 20px 15px;border-top:1px solid #666565;border-bottom:1px solid #666565;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside .divider{height:46px;width:2px;background:#fff;margin:6px 25px 0;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside .item{height:46px;margin:0;flex: 1 1 0;text-align:center;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside .item .value{font-size:28px;font-weight:600;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside .item .text{font-size:13px;font-weight:600;}
+
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside .item .value{font-size:22px;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside .item .text{font-size:12px;}
+
+.ho_kpis .chart_boxes .ho_kpi .content .badge_area{height:21px;padding:5px 20px;background:#22303F;}
+.ho_kpis .chart_boxes .ho_kpi .content .badge_area .badge{margin-right:4px;}
+
+.ho_kpis .chart_boxes .ho_kpi .content .chart{color:#fff;height:300px;padding:0 10px 20px 10px;}
+
+
+.ho_kpis .card .form-group label{color:#22303F;}
+.ho_kpis .ho_spinner{background:#2e435c;color:#fff;border:none;margin-bottom:30px;}
+.ho_kpis .ho_kpi .ho_spinner{margin-bottom:0;}
+.ho_kpis .select2-container--high_office .select2-selection{background:#fff;}
+
+//.ho_kpis .apexcharts-legend{bottom:0 !important;}
+//.ho_kpis .apexcharts-legend-text{color:#fff !important;}
+//.ho_kpis .apexcharts-text.apexcharts-yaxis-label{color:#fff;fill:#fff}
+//.ho_kpis .apexcharts-text.apexcharts-xaxis-label{color:#fff;fill:#fff}
+//.ho_kpis .apexcharts-tooltip{color:#2e435c;}
+//.ho_kpis .apexcharts-tooltip .apexcharts-tooltip-series-group.active {background:#ffffff !important;}
+
+
+@media only screen and (max-width:1700px){
+
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside .divider{margin:6px 5px 0;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside .item{flex-grow: 3;}
+
+}
+
+
+@media only screen and (max-width:1400px){
+
+.ho_kpis .chart_boxes .ho_kpi{width:100%;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside .divider{background:#fff;}
+
+}
+
+@media only screen and (max-width:1200px){
+
+  .ho_kpis .panel_items{flex-wrap:wrap;}
+  .ho_kpis .panel_items .panel_item{width:50%;margin-bottom:10px;}
+  .ho_kpis .panel_items .panel_item.time_range{width:100%;}
+
+}
+
+
+@media only screen and (max-width:768px){
+
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .head .name,
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .head .desc .livewire-tooltip-wrapper .fa{font-size:18px;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside{display:block;padding:0;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside .item{height:auto;margin:0;padding:1px 15px 5px;}
+.ho_kpis .chart_boxes .ho_kpi .content .sum_data .inside .divider{display:block;height:1px;width:100%;background:#666565;margin:0;}
+
+.ho_kpis .chart_boxes .ho_kpi .content .badge_area{text-align:center;}
+.ho_kpis .chart_boxes .ho_kpi .content .badge_area small{display:none;}
+
+
+}
+
+
+@media only screen and (max-width:480px){
+
+.ho_kpis .panel_items .panel_item{width:100%;height:auto;}
+
+}

@@ -1,0 +1,126 @@
+.flex-break{flex-basis:100%;height:0;}
+
+.mb-bootstrap{margin-bottom:30px;}
+
+.datatable {
+  width: 100% !important;
+}
+
+.dataTables_length,
+.dataTables_filter,
+.dt-buttons {
+  margin-bottom: 0.333em;
+  margin-top: .2rem;
+}
+
+.dataTables_filter {
+  margin-right: .2rem;
+}
+
+.dt-buttons .btn {
+  margin-left: 0.333em;
+  border-radius: 0;
+}
+
+.table.datatable {
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+table.dataTable thead th {
+  border-bottom: 2px solid #c8ced3;
+}
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+  border-bottom: 1px solid #c8ced3;
+}
+
+
+
+.btn-info,
+.badge-info {
+  color: white;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+  background-image: none;
+}
+
+.sidebar .nav-item {
+  cursor: pointer;
+}
+
+.btn-primary{
+  border-radius:80px;
+  background:$primary_b;
+  border:1px solid $primary_b;
+
+  &:hover{background:none;color:$primary_b;}
+
+}
+
+
+.btn-light{
+  border-radius:80px;
+  background:$brand-info;
+  border:1px solid $brand-info;
+  &:hover{background:none;color:$brand-info;}
+}
+
+
+
+.btn-default {
+  color: #23282c;
+  background-color: #f0f3f5;
+  border-color: #f0f3f5;
+}
+
+.btn-default.focus,
+.btn-default:focus {
+  box-shadow: 0 0 0 .2rem rgba(209, 213, 215, .5);
+}
+
+.btn-default:hover {
+  color: #23282c;
+  background-color: #d9e1e6;
+  border-color: #d1dbe1;
+}
+
+.btn-group-xs > .btn,
+.btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.btn_radius{border-radius:80px;}
+
+.copy_area{display:none;}
+
+
+.date_time_container{
+  position:relative;
+
+  input{background:$bg_grey;color:$primary;font-weight:700;cursor:pointer;}
+
+  .icon{position:absolute;right:10px;top:7px;cursor:pointer;padding:0 3px;color:$primary;}
+}
+
+
+.opacity:hover{opacity:.7;transition:all 0.3s ease;cursor:pointer;}
+
+.form-group.onboarding_checkbox{display:none;}
+
+.modal-ho .modal-header{background:#22303F;color:#fff;}
+
+.bg-gray-50{background:#FAFAFA;}
+.bg-gray-50 .select2-container--high_office .select2-selection{background:#fff;}
+
+.daterangepicker{
+  .drp-buttons .btn{background:$secondary;border:none;color:#fff;}
+  .ranges li.active{background:$secondary;}
+  td.in-range{background:#EAFAF1;}
+}

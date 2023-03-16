@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Core-UI Icons
+@import "resources/scss/core_ui_icons/free-icons";
+
+// Bootstrap
+@import "resources/scss/layout";
+@import "resources/scss/header";
+@import "resources/scss/auth";
+@import "resources/scss/dashboard";
+@import "resources/scss/sidebar";
+@import "resources/scss/animate";
+@import "resources/scss/select2-bootstrap";
+@import "resources/scss/dm_uploader";
+@import "resources/scss/hosc";
+@import "resources/scss/ho_kpis";
+@import "resources/scss/custom-styles";
+
+
+.-invisible-until-ready{
+  visibility: hidden!important;
+}

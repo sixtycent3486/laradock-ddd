@@ -1,0 +1,73 @@
+.hosc_modal .nav-tabs .nav-item{margin-right:6px;}
+.hosc_modal .nav-tabs .nav-item .nav-link.active{border-color:#f0f0f0;font-weight:700;}
+.hosc_modal .nav-tabs .nav-item .nav-link .icon{margin-right:4px;}
+.hosc_modal .tab-content{border:1px solid #f0f0f0;}
+
+.card.hosc{border:none;overflow:hidden;}
+.card.hosc .card-header{background:none;border:none;font-size:16px;color:#22303F;font-weight:500;}
+.card.hosc .card-body .table{color:#22303F;}
+.card.hosc .card-body .table tbody tr:nth-of-type(odd){background-color:rgba(0,0,0,.02);}
+.card.hosc .card-body .table th{border:none;font-weight:500;}
+.card.hosc .card-body .table td{border-top:none;}
+
+.card.hosc .form-group label{margin:7px 0 3px 4px;font-weight:500;}
+.card.hosc .form-group .form-check label{margin-top:0;font-weight:500;}
+
+.card.hosc .form-control.files{padding:3px;}
+.card.hosc .form-group .filenames{display:flex;align-items:center;flex-wrap:wrap;}
+.card.hosc .form-group .filenames .name{font-size:12px;padding:2px 4px 2px 2px;border: 1px solid #e4e7ea;border-radius:0.25rem;margin:2px 2px 2px 0;background:#f1f1f1;}
+
+.card.hosc .card-toggle.hide,
+.card.hosc .hide_col{display:none;}
+
+.card.hosc .card-body.details .form-group{background:rgba(0, 0, 0, 0.02);}
+.card.hosc .card-body.details .form-group label{margin:0 0 6px;}
+
+.card.hosc .url_area .webviewer{background-color:rgba(0,0,0,.02);position:relative;overflow:hidden;width:100%;padding-top:86.25%;height:500px;padding:0;}
+.card.hosc .url_area .webviewer #webviewer_frame{position:absolute;top:0;left:0;bottom:0;right:0;width:154%;height:150%;border:0;zoom:.65;-moz-transform:scale(0.65);-moz-transform-origin:0 0;-o-transform:scale(0.65);-o-transform-origin:0 0;-webkit-transform:scale(0.65);-webkit-transform-origin:0 0}
+
+.card.hosc .note_item p{white-space:pre-line;}
+
+.date_time_container .icon{position:absolute;right:7px;top:8px;cursor:pointer;padding:0 3px;}
+
+.card.hosc .calendar .outlook_cal{height:400px;overflow-y:scroll;width:100%;}
+
+.card.hosc a.scroll_it{text-decoration:none;color:#23282c;}
+
+.card.hosc .file_box{padding:20px;background: rgba(0, 0, 0, 0.02);border-radius:5px;position:relative;margin-bottom:20px;display:flex;align-items:center;}
+.card.hosc .file_box .file_img{width:15%;}
+.card.hosc .file_box .file_title{width:60%;padding:0 10px;}
+.card.hosc .file_box .file_icons{width:25%;}
+.card.hosc .file_box .file_img{line-height:120px;text-align:center;margin-right:15px;}
+.card.hosc .file_box .file_img img{height:48px}
+.card.hosc .file_box .file_title h5{font-size:15px;}
+.card.hosc .file_box .file_title small{font-size:12px;}
+.card.hosc .file_box .file_icons{margin-left:auto;}
+.card.hosc .file_box .file_icon{font-size:22px;color:#98a6ad;margin:0 4px;cursor:pointer;}
+.card.hosc .file_box .file_icon:hover{color:#313a46}
+.card.hosc .file_box a:hover{text-decoration:none;}
+
+.date_time_container {
+  position: relative;
+
+  input {
+    background: $bg_grey;
+    color: $primary;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .icon {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    cursor: pointer;
+    padding: 0 3px;
+    color: $primary;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .card.hosc .url_area .webviewer #webviewer_frame{zoom:1;}
+}
+

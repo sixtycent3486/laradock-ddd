@@ -1,0 +1,53 @@
+.sidebar-minimized {
+
+  .sidebar {
+
+    .nav-link {
+      .nav-icon {
+        margin-left: 15px;
+      }
+    }
+
+  }
+
+}
+
+
+.sidebar {
+
+  background:$primary;
+
+  .brand-card-body{
+    display: block;
+    padding: 5px;
+    .brand-card-body>*{
+      display: block;
+    }
+    .btn{
+      width: 100%;
+    }
+  }
+  .brand-card-body>:not(:last-child){
+    border: 0;
+  }
+
+  .nav-link {
+
+    display:flex;
+    align-items:center;
+    height:40px;
+
+    &.active{
+    background:$primary;
+
+    .nav-icon{color:$secondary;}
+
+    }
+
+    .nav-icon{font-size:20px;margin-right:16px;}
+
+
+  }
+
+
+}

@@ -1,0 +1,6 @@
+@import "./lib/coreui.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+

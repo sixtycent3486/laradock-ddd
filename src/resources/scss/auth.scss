@@ -1,0 +1,17 @@
+.login-page{
+  .logo {
+
+    margin: 0 auto;
+    max-width:300px;
+    img{width:100%;}
+
+  }
+
+  button{
+    background: $secondary;
+    &:hover{
+      background: $primary;
+    }
+  }
+
+}

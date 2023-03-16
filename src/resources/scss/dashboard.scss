@@ -1,0 +1,75 @@
+.sidebar {
+  .nav-dropdown > .nav-dropdown-items {
+    padding-left: 30px;
+  }
+}
+
+.performance-card{
+  background: $primary;
+  border: 0 !important;
+
+  .card-body .text-name{white-space: pre-line;}
+
+}
+
+
+.all-customer-monthly {
+
+  .progress-group-header {
+
+    * {
+      font-size: 80%;
+      color: #73818f !important
+    }
+
+    i {
+      margin-right: 5px;
+      line-height: 1.5;
+    }
+  }
+
+  .doughnut-card {
+    border: 0;
+
+    .doughnut-headline {
+      font-weight: bold;
+      font-size: 90%;
+      padding-bottom: 5px;
+    }
+
+    .doughnut-legende {
+      font-size: 80%;
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        color: #fff;
+        flex-grow: 4;
+        text-align: center;
+        padding: 3px 5px;
+        font-weight: bold;
+
+        &.lead1 {
+          background: #4caf50;
+
+        }
+
+        &.lead2 {
+          background: #cddc39;
+        }
+
+        &.lead3 {
+          background: #f44336;
+        }
+
+        &.leadx {
+          background: #ff9800;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 0 0 10px;
+    }
+  }
+}
